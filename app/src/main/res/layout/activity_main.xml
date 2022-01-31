@@ -23,8 +23,10 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
+            app:tabGravity="start"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/purple_500"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
