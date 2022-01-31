@@ -2,16 +2,16 @@ package vcs.foreverbalticsfiles;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import vcs.foreverbalticsfiles.ui.main.SectionsPagerAdapter;
 import vcs.foreverbalticsfiles.databinding.ActivityMainBinding;
@@ -41,5 +41,16 @@ public class MainActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
+        List<String> notes = new ArrayList<>();
+        notes.add("1 news");
+        notes.add("2 news");
+        notes.add("3 news");
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
+        ListView listView = findViewById(R.id.news_list_text);
+      //  listView.setAdapter(arrayAdapter);
     }
+
+
 }
