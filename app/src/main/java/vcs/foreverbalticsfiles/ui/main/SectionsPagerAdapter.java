@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import vcs.foreverbalticsfiles.Fragment1;
 import vcs.foreverbalticsfiles.Fragment2;
 import vcs.foreverbalticsfiles.Fragment3;
+import vcs.foreverbalticsfiles.Fragment4;
 import vcs.foreverbalticsfiles.R;
 
 /**
@@ -42,7 +43,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new Fragment3();
                 break;
             case 3:
-                fragment = new Fragment3();
+                fragment = new Fragment4();
                 break;
 
         }

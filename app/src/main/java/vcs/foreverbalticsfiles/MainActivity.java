@@ -1,5 +1,6 @@
 package vcs.foreverbalticsfiles;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
@@ -7,7 +8,9 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -33,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
+
+        Button button = findViewById(R.id.viewPDF);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), WebActivity.class);
+                intent.putExtra("pdf_url","https://foreverliving.app.box.com/file/913349516266?s=cwyz87ezbw2xve8pbuki2tajoohg4xez");
+                startActivity(intent);
+            }
+        });
 //        FloatingActionButton fab = binding.fab;
 
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -43,14 +56,16 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-        List<String> notes = new ArrayList<>();
-        notes.add("1 news");
-        notes.add("2 news");
-        notes.add("3 news");
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
-        ListView listView = findViewById(R.id.news_list_text);
-//        listView.setAdapter(arrayAdapter);
+//        List<String> notes = new ArrayList<>();
+//        notes.add("1 news");
+//        notes.add("2 news");
+//        notes.add("3 news");
+//
+//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
+//        ListView listView = findViewById(R.id.news_list_text);
+
+//        listView.setAdapter(arrayAdapter); cia klaida
     }
 
 
