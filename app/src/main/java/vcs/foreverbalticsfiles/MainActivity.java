@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment1);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -37,15 +36,17 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
 
-        Button button = findViewById(R.id.viewPDF);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), WebActivity.class);
-                intent.putExtra("pdf_url","https://foreverliving.app.box.com/file/913349516266?s=cwyz87ezbw2xve8pbuki2tajoohg4xez");
-                startActivity(intent);
-            }
-        });
+//        Button button = findViewById(R.id.viewPDF);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), WebActivity.class);
+//                intent.putExtra("pdf_url","https://foreverliving.app.box.com/file/913349516266?s=cwyz87ezbw2xve8pbuki2tajoohg4xez");
+//                startActivity(intent);
+//            }
+//        });
+
+
 //        FloatingActionButton fab = binding.fab;
 
 //        fab.setOnClickListener(new View.OnClickListener() {

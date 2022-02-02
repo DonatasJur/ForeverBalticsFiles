@@ -16,6 +16,6 @@ public class WebActivity extends AppCompatActivity {
         WebView webView = findViewById(R.id.web);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://docs.google.com/viewer?embedded=true&url=" + url);
-
+//        webView.loadUrl(url);
     }
 }
